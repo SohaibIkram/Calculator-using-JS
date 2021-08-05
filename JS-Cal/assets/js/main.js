@@ -46,6 +46,10 @@ function insert(param) {
   expression.value += param;
 }
 
+function ClearIn() {
+  expression.value = "";
+}
+
 function backspace() {
   expression.value = expression.value.slice(0, -1);
 }
