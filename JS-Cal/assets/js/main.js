@@ -40,7 +40,6 @@
 */
 
 var expression = document.getElementById("result");
-var x = document.getElementById('formE1');
 
 function insert(param) {
   expression.value += param;
@@ -61,11 +60,39 @@ function equal() {
 
 
 
-
+/*
 function equalWithoutEval() {
-  console.log(expression.value);
+  let expArr = [...expression.value];
+  let operators = "/*+-", tempNum = "", result = 0;
+
+  for(let i = 0; i < expArr.length; i++){
+    let ch = expArr[i];
+    if(operators.includes(ch)){
+      if(result === 0){
+
+      }
+      switch (ch) {
+        case '+':
+          result += parseInt(tempNum);
+          break;
+        case '-':
+          result -= parseInt(tempNum);
+          break;
+        case '*':
+          result *= parseInt(tempNum);
+          break;
+        case '/':
+          result /= parseInt(tempNum);
+          break;
+      }
+      tempNum = "";
+    }
+    else {
+      tempNum += ch;
+    }
+  }
 }
-/**
+
  *
  *
  *
@@ -76,7 +103,8 @@ function equalWithoutEval() {
  *
  * and then it will execute.
  *
- * **/
+ *
+ */
 
 
 
