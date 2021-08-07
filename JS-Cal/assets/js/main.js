@@ -41,8 +41,8 @@
 
 var expression = document.getElementById("result");
 
-function insert(param) {
-  expression.value += param;
+function insert(val) {
+  expression.value += val;
 }
 
 function ClearIn() {
